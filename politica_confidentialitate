@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Politica de Confidențialitate - Vestea Bună</title>
+    <style>
+        :root {
+            --primary-blue: #2196F3;
+            --primary-blue-dark: #1976D2;
+            --surface-light: #FFFFFF;
+            --surface-dark: #121212;
+            --on-surface-light: #212121;
+            --on-surface-dark: #FFFFFF;
+            --success-light: #4CAF50;
+            --success-dark: #66BB6A;
+            --card-light: #F5F5F5;
+            --card-dark: #1E1E1E;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background-color: var(--surface-light);
+            color: var(--on-surface-light);
+            transition: all 0.3s ease;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: var(--surface-dark);
+                color: var(--on-surface-dark);
+            }
+            
+            .container {
+                background-color: var(--surface-dark);
+            }
+            
+            .card {
+                background-color: var(--card-dark);
+                border-color: #333;
+            }
+            
+            .highlight {
+                background-color: var(--success-dark);
+                color: var(--surface-dark);
+            }
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: var(--surface-light);
+        }
+
+        .header {
+            text-align: center;
+            padding: 30px 0;
+            border-bottom: 2px solid var(--primary-blue);
+            margin-bottom: 30px;
+        }
+
+        .app-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 20px;
+            background: linear-gradient(135deg, var(--primary-blue), var(--primary-blue-dark));
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 32px;
+            font-weight: bold;
+        }
+
+        h1 {
+            color: var(--primary-blue);
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 300;
+        }
+
+        .subtitle {
+            color: #666;
+            font-size: 1.1em;
+            margin-bottom: 10px;
+        }
+
+        .last-updated {
+            font-style: italic;
+            color: #888;
+            font-size: 0.9em;
+        }
+
+        .card {
+            background-color: var(--card-light);
+            border: 1px solid #E0E0E0;
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+        }
+
+        h2 {
+            color: var(--primary-blue);
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        h3 {
+            color: var(--primary-blue-dark);
+            font-size: 1.2em;
+            margin: 20px 0 10px 0;
+        }
+
+        .icon {
+            font-size: 1.2em;
+        }
+
+        .highlight {
+            background-color: var(--success-light);
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .info-box {
+            background-color: #E3F2FD;
+            border-left: 4px solid var(--primary-blue);
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .info-box {
+                background-color: #1A237E;
+                border-left-color: var(--primary-blue);
+            }
+            
+            .subtitle {
+                color: #B0B0B0;
+            }
+            
+            .last-updated {
+                color: #888;
+            }
+        }
+
+        ul {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .contact-info {
+            background: linear-gradient(135deg, var(--primary-blue), var(--primary-blue-dark));
+            color: white;
+            padding: 25px;
+            border-radius: 12px;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .contact-info h2 {
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        .contact-link {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 8px 16px;
+            border: 2px solid white;
+            border-radius: 6px;
+            display: inline-block;
+            margin-top: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .contact-link:hover {
+            background-color: white;
+            color: var(--primary-blue);
+        }
+
+        .footer {
+            text-align: center;
+            padding: 30px 0;
+            border-top: 1px solid #E0E0E0;
+            margin-top: 30px;
+            color: #666;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 15px;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+            
+            .card {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="app-icon">VB</div>
+            <h1>Politica de Confidențialitate</h1>
+            <div class="subtitle">Aplicația Vestea Bună</div>
+            <div class="last-updated">Ultima actualizare: 30 octombrie 2025</div>
+        </div>
+
+        <div class="highlight">
+            <span class="icon">🔒</span>
+            <strong>Aplicația noastră NU colectează niciun fel de date personale de la utilizatori.</strong>
+        </div>
+
+        <div class="card">
+            <h2><span class="icon">📱</span>Despre Aplicația Vestea Bună</h2>
+            <p>Vestea Bună este o aplicație mobilă gratuită care permite utilizatorilor să citească și să navigheze prin conținutul blogului "Vestea Bună". Aplicația funcționează ca un cititor de blog simplu și securizat, fără a colecta informații personale.</p>
+        </div>
+
+        <div class="card">
+            <h2><span class="icon">🚫</span>Ce Date NU Colectăm</h2>
+            <p>Pentru a fi complet transparenți, confirmăm că aplicația noastră <strong>NU colectează, NU stochează și NU procesează</strong> următoarele tipuri de informații:</p>
+            <ul>
+                <li>Date de identificare personală (nume, adresă email, număr de telefon)</li>
+                <li>Informații de localizare GPS</li>
+                <li>Date de navigare și comportament în aplicație</li>
+                <li>Informații despre dispozitiv (cu excepția celor necesare funcționării)</li>
+                <li>Date biometrice sau de autentificare</li>
+                <li>Informații de contact sau din agenda telefonului</li>
+                <li>Date din alte aplicații</li>
+                <li>Informații financiare sau de plată</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2><span class="icon">⚙️</span>Cum Funcționează Aplicația</h2>
+            <div class="info-box">
+                <strong>Funcționare Offline:</strong> Aplicația descarcă și stochează articolele local pe dispozitivul dumneavoastră pentru citire offline. Aceste date rămân doar pe dispozitivul dumneavoastră.
+            </div>
+            <h3>Datele Stocate Local:</h3>
+            <ul>
+                <li><strong>Articole și conținut</strong> - pentru citire offline</li>
+                <li><strong>Preferințe de temă</strong> - mod întunecat/luminos</li>
+                <li><strong>Articole favorite</strong> - lista salvată local</li>
+                <li><strong>Setări aplicație</strong> - preferințele utilizatorului</li>
+            </ul>
+            <p><em>Toate aceste informații sunt stocate exclusiv pe dispozitivul dumneavoastră și nu sunt transmise nicăieri.</em></p>
+        </div>
+
+        <div class="card">
+            <h2><span class="icon">🌐</span>Conectivitatea Internet</h2>
+            <p>Aplicația utilizează conexiunea la internet exclusiv pentru:</p>
+            <ul>
+                <li>Descărcarea articolelor noi de pe blogul "Vestea Bună"</li>
+                <li>Actualizarea conținutului existent</li>
+                <li>Descărcarea imaginilor asociate articolelor</li>
+            </ul>
+            <div class="info-box">
+                <strong>Important:</strong> Aceste conexiuni sunt făcute direct la serverele blogului și nu trec prin servere terțe care ar putea colecta date despre dumneavoastră.
+            </div>
+        </div>
+
+        <div class="card">
+            <h2><span class="icon">🔐</span>Securitate și Protecția Datelor</h2>
+            <h3>Măsuri de Securitate:</h3>
+            <ul>
+                <li><strong>Comunicare securizată</strong> - toate conexiunile folosesc HTTPS</li>
+                <li><strong>Stocare locală</strong> - datele rămân pe dispozitivul dumneavoastră</li>
+                <li><strong>Fără înregistrare</strong> - nu este necesară crearea unui cont</li>
+                <li><strong>Fără urmărire</strong> - nu există sisteme de analytics sau tracking</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2><span class="icon">👶</span>Protecția Minorilor</h2>
+            <p>Deoarece aplicația noastră nu colectează niciun fel de date personale, aceasta este sigură pentru utilizatori de toate vârstele, inclusiv copii sub 13 ani. Nu este necesară supervizarea parentală din perspectiva protecției datelor.</p>
+        </div>
+
+        <div class="card">
+            <h2><span class="icon">📜</span>Drepturi GDPR</h2>
+            <p>În conformitate cu Regulamentul General privind Protecția Datelor (GDPR), deoarece nu colectăm date personale:</p>
+            <ul>
+                <li>Nu există date de șters (dreptul la ștergere)</li>
+                <li>Nu există date de corectat (dreptul la rectificare)</li>
+                <li>Nu există date de exportat (dreptul la portabilitate)</li>
+                <li>Nu există profilare sau procesare automată</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2><span class="icon">🔄</span>Actualizări ale Politicii</h2>
+            <p>În cazul în care această politică de confidențialitate se va schimba în viitor, versiunea actualizată va fi disponibilă în aplicație. Vom notifica utilizatorii despre orice modificări semnificative prin actualizarea aplicației.</p>
+        </div>
+
+        <div class="card">
+            <h2><span class="icon">⚖️</span>Jurisdicție și Lege Aplicabilă</h2>
+            <p>Această politică de confidențialitate este guvernată de legile României. Orice dispute vor fi rezolvate în conformitate cu legislația română privind protecția datelor cu caracter personal.</p>
+        </div>
+
+        <div class="contact-info">
+            <h2><span class="icon">📧</span>Contact</h2>
+            <p>Dacă aveți întrebări despre această politică de confidențialitate sau despre aplicația Vestea Bună, ne puteți contacta:</p>
+            <a href="mailto:contact@vesteabuna.ro" class="contact-link">contact@vesteabuna.ro</a>
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2025 Vestea Bună. Toate drepturile rezervate.</p>
+            <p>Aplicație dezvoltată cu respect pentru confidențialitatea utilizatorilor.</p>
+        </div>
+    </div>
+</body>
+</html>
